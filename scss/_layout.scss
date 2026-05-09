@@ -1,0 +1,80 @@
+body {
+  font-family: $fuente;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient($color-fondo);
+  box-sizing: border-box;
+  height: 100%
+}
+
+.header {
+  @include flex-center;
+  background-color: $color-oscuro;
+  color: $color-primario;
+  padding: 15px;
+}
+
+.hero {
+  @include flex-center;
+  height: 200px;
+  background-color: $color-primario;
+  color:$color-secundario;
+  font-size: 26px;
+}
+
+.contenedor {
+  padding: 20px;
+
+  h2 {
+    color: $color-blanco;
+  }
+}
+
+.grid-planes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+
+  @include responsive(768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-entrenadores {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+
+  @include responsive(768px) {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+.card {
+  background-color: $color-blanco;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+
+  h3 {
+    color: $color-oscuro;
+  }
+
+  button {
+    @include boton;
+    color: $color-blanco;
+    padding: 10px;
+
+  }
+
+}
+
+.footer {
+  @include flex-center;
+  background-color: $color-oscuro;
+  color: $color-primario;
+  padding: 15px;
+}
