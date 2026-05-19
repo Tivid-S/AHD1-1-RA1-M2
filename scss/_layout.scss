@@ -8,17 +8,56 @@ body {
 }
 
 .header {
-  @include flex-center;
+  display: flex;
+  align-items: center;
   background-color: $color-oscuro;
   color: $color-primario;
   padding: 15px;
+  gap: 20px;
+
+  h1 {
+    
+    text-align: center;
+    flex: 5;
+  }
+
+  a {
+    text-align: center;
+    background-color: $color-oscuro;
+    border-radius: 20px 0px 0px 0px;
+    padding: 20px;
+    flex: 1;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+  }
+
+  a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: #00bfff;
+    transition: width 0.3s ease;
+  }
+
+  a:hover {
+    color: #00bfff;
+  }
+
+  a:hover::after {
+    width: 100%;
+  }
 }
 
 .hero {
   @include flex-center;
   height: 200px;
   background-color: $color-primario;
-  color:$color-secundario;
+  color: $color-secundario;
   font-size: 26px;
 }
 
