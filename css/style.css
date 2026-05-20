@@ -1,12 +1,14 @@
 /* COLORES */
 /* FUENTES */
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: Verdana;
   margin: 0;
   padding: 0;
   background: linear-gradient(27deg, rgb(50, 67, 118) 0%, rgb(88, 107, 164) 50%);
   box-sizing: border-box;
-  height: 100%;
 }
 
 .header {
@@ -118,6 +120,7 @@ body {
   background-color: black;
   color: #7f9cf1;
   padding: 15px;
+  margin-top: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
